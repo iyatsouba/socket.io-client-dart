@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+
 /**
  * socket.dart
  *
@@ -15,13 +16,12 @@ import 'dart:convert';
 //import 'dart:html';
 
 import 'package:logging/logging.dart';
-import 'package:socket_io_common/src/util/event_emitter.dart';
 import 'package:socket_io_client/src/engine/parseqs.dart';
-import 'package:socket_io_common/src/engine/parser/parser.dart' as parser;
 import 'package:socket_io_client/src/engine/transport/polling_transport.dart';
-import './transport/transport.dart';
+import 'package:socket_io_common/src/engine/parser/parser.dart' as parser;
+import 'package:socket_io_common/src/util/event_emitter.dart';
 
-// ignore: uri_does_not_exist
+import './transport/transport.dart';
 import './transport/transports_stub.dart'
 // ignore: uri_does_not_exist
 if (dart.library.html) './transport/transports.dart'
@@ -171,7 +171,7 @@ class Socket extends EventEmitter {
 //  this.pingIntervalTimer = null;
 //  this.pingTimeoutTimer = null;
 
-    //this.open();
+    this.open();
   }
 
   static bool priorWebsocketSuccess = false;
