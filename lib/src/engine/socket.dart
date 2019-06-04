@@ -171,7 +171,7 @@ class Socket extends EventEmitter {
 //  this.pingIntervalTimer = null;
 //  this.pingTimeoutTimer = null;
 
-    this.open();
+    //this.open();
   }
 
   static bool priorWebsocketSuccess = false;
